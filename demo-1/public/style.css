@@ -805,12 +805,20 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+@media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+}
+
 @media (min-width: 1536px) {
   .\32xl\:max-w-full {
     max-width: 100%;
-  }
-
-  .\32xl\:flex-row {
-    flex-direction: row;
   }
 }
