@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Basic Demo</title>
+    <link rel="stylesheet" href="./public/style.css">
+</head>
+<body class="bg-blue-400">
+    <div class="container bg-gray-200 mx-auto min-h-screen">
+        <header class="flex justify-evenly items-center bg-white">
+            <div>
+                <ul class="list-none gap-8 flex">
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Home</li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Portfolio</li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">About Us</li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Reach To Us</li>
+                </ul>
+            </div>
+            <div>
+                <img src="./assets/img/logo.png" alt="logo">
+            </div>
+            <div>
+                <ul class="list-none gap-8 flex">
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Programs</li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Location</li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Contact</li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Lorem</li>
+                </ul>
+            </div>
+        </header>
+        <h1 class="text-7xl text-center pt-5 text-violet-400 hover:underline hover:cursor-pointer">Hello World</h1>
+        <div class="flex flex-wrap flex-col gap-4 2xl:flex-row justify-evenly mt-10">
+            <div>
+                <img class="w-full 2xl:max-w-full hover:grayscale hover:cursor-pointer" src="./assets/img/Layer35.png" alt="">
+            </div>
+            <div>
+                <img class="w-full 2xl:max-w-full hover:grayscale hover:cursor-pointer" src="./assets/img/Layer36.png" alt="img">
+            </div>
+            <div>
+                <img class="w-full 2xl:max-w-full hover:grayscale hover:cursor-pointer" src="./assets/img/Layer38.png" alt="">
+            </div>
+            <div>
+                <img class="w-full 2xl:max-w-full hover:grayscale hover:cursor-pointer" src="./assets/img/Layer40.png" alt="img">
+            </div>
+        </div>
+        <div class="flex flex-col gap-8 justify-center items-center pt-5">
+            <button class="mt-8 rounded-full px-5 py-3 transition ease-in-out bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 hover:text-white">
+                Save Changes
+            </button>
+            <div class="w-full border border-indigo-400 mt-8 mb-8">
+                <p class="text-center text-3xl font-space mt-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi accusamus placeat animi tempora? Voluptatum praesentium iste ducimus laborum eius, officia deserunt quos perspiciatis perferendis tempore architecto reprehenderit? Totam, dolorum impedit?</p>
+                <br><p class="text-center text-3xl font-space mb-8">Machine learning is a field of computer science that gives computers the ability to learn without being explicitly programmed. It is a part of artificial intelligence based on the idea that systems can learn from data, identify patterns and make decisions with minimal human intervention.</p>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-end">
+        <div class="hidden absolute top-full animate-bounce rounded-full p-3 mr-16 bg-white cursor-pointer" id="top" type="button">                
+            <svg class="w-6 h-6 text-violet-500" xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/>
+            </svg>    
+        </div>
+    </div>
+    <script>
+        let mybutton = document.getElementById("top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+        scrollFunction();
+        };
+
+        function scrollFunction() {
+        if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+        ) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
