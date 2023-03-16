@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html x-data="{dark:false}" x-bind:class="dark ? 'dark' : '' " lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind Basic Demo</title>
     <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-blue-400">
-    <div class="container bg-gray-200 mx-auto min-h-screen">
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+    <div class="container bg-gray-200 dark:bg-gradient-to-r from-gray-800 to-slate-500 mx-auto min-h-screen">
         <header class="hidden lg:flex justify-evenly items-center bg-white">
             <div>
                 <ul class="list-none gap-8 flex">
-                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Home</li>
-                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Portfolio</li>
-                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">About Us</li>
-                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Reach To Us</li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer"><a href="#" title="Home">Home</a></li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer"><a href="#" title="Portfolio">Portfolio</a></li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer"><a href="#" title="About Us">About Us</a></li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer"><a href="#" title="Reach Us">Reach To Us</a></li>
                 </ul>
             </div>
             <div>
@@ -23,14 +25,21 @@
             </div>
             <div>
                 <ul class="list-none gap-8 flex">
-                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Programs</li>
-                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Location</li>
-                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Contact</li>
-                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer">Lorem</li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer"><a href="#" title="Programs">Programs</a></li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer"><a href="#" title="Location">Location</a></li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer"><a href="#" title="Contact">Contact</a></li>
+                    <li class="text-violet-500 text-2xl hover:text-black hover:cursor-pointer"><a href="#" title="Lorem">Lorem</a></li>
                 </ul>
             </div>
+            <div class="mt-5">
+                <label class="relative inline-flex items-center mb-5 cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer">
+                    <div @click="dark = !dark" class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black"></div>
+                    <span class="hidden ml-3 text-sm font-medium dark:text-gray-900 dark:block"></span>
+                </label>                
+            </div>
         </header>
-        <h1 class="text-7xl text-center pt-5 text-violet-400 hover:underline hover:cursor-pointer">Hello World</h1>
+        <h1 class="text-7xl text-center pt-5 text-violet-400 hover:underline hover:cursor-pointer dark:text-white">Hello World</h1>
         <div class="flex flex-wrap flex-col gap-4 xl:flex-row justify-evenly mt-10">
             <div>
                 <img class="w-full 2xl:max-w-full hover:grayscale hover:cursor-pointer" src="./assets/img/Layer35.png" alt="">
@@ -46,12 +55,12 @@
             </div>
         </div>
         <div class="flex flex-col gap-8 justify-center items-center pt-5">
-            <button class="mt-8 rounded-full px-5 py-3 transition ease-in-out bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 hover:text-white">
+            <button class="mt-8 rounded-full px-5 py-3 transition ease-in-out bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 hover:text-white dark:bg-gradient-to-r from-red-500 to-orange-500">
                 Save Changes
             </button>
             <div class="w-full border border-indigo-400 mt-8 mb-8">
-                <p class="text-center text-3xl font-space mt-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi accusamus placeat animi tempora? Voluptatum praesentium iste ducimus laborum eius, officia deserunt quos perspiciatis perferendis tempore architecto reprehenderit? Totam, dolorum impedit?</p>
-                <br><p class="text-center text-3xl font-space mb-8">Machine learning is a field of computer science that gives computers the ability to learn without being explicitly programmed. It is a part of artificial intelligence based on the idea that systems can learn from data, identify patterns and make decisions with minimal human intervention.</p>
+                <p class="text-center text-3xl font-space mt-8 dark:text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit.Modi accusamus placeat animi tempora? Voluptatum praesentium iste ducimus laborum eius, officia deserunt quos perspiciatis perferendis tempore architecto reprehenderit? Totam, dolorum impedit?</p>
+                <br><p class="text-center text-3xl font-space mb-8 dark:text-white">Machine learning is a field of computer science that gives computers the ability to learn without being explicitly programmed. It is a part of artificial intelligence based on the idea that systems can learn from data, identify patterns and make decisions with minimal human intervention.</p>
             </div>
         </div>
     </div>

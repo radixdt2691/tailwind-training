@@ -6,3 +6,8 @@
     font-family: "Space";
     src: url("../assets/fonts/SpaceGrotesk-Regular.ttf");
 }
+
+li{
+    @apply dark:text-black;
+}
+    
