@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Demo-2</title>
+    <link rel="stylesheet" href="./public/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        .dropdown:hover .dropdown-menu {
+        display: block;
+        }
+    </style>
+</head>
+<body> 
+    <header class="navbar bg-[#6b925b] w-full sticky top-0">
+            <div class="flex gap-40 justify-start items-center">
+                <div class="img">
+                    <img src="./assets/images/logo.png" alt="logo">
+                </div>
+                <div>
+                    <ul class="list-none gap-12 flex justify-center items-center">
+                        <li class="text-white text-2xl hover:text-black uppercase hover:cursor-pointer"><a href="#" title="Home">Home</a></li>
+                        <div>
+
+                            <div class="dropdown inline-block relative">
+                              <button class="text-white text-2xl hover:text-black uppercase hover:cursor-pointer inline-flex items-center">
+                                <span class="mr-1">Our Products</span>
+                                <svg class="h-6 w-6 text-white hover:text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd"  d="M19 9l-7 7-7-7" clip-rule="evenodd" />
+                                </svg>
+                              </button>
+                              <ul class="dropdown-menu absolute hidden text-gray-700 pt-3 w-48">
+                                <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Plants</a></li>
+                                <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Herbal Tea</a></li>
+                                <li><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Natural Aloevera</a></li>
+                                <li><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Ayurevedic Medicines</a></li>
+                                <li><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Green Leaf Gifts</a></li>
+                                
+                              </ul>
+                            </div>
+                          
+                          </div>
+                        <li class="text-white text-2xl hover:text-black uppercase hover:cursor-pointer"><a href="#" title="About Us">About Us</a></li>
+                        <li class="text-white text-2xl hover:text-black uppercase hover:cursor-pointer"><a href="#" title="Pricing">Pricing</a></li>
+                        <li class="text-white text-2xl hover:text-black uppercase hover:cursor-pointer"><a href="#" title="Quote">Request a Quote</a></li>
+                        <li class="text-white text-2xl hover:text-black uppercase hover:cursor-pointer"><a href="#" title="contact Us">Contact Us</a></li>
+                    </ul>
+                </div>
+        </div>
+    </header>
+    <section class="banner">
+        <img src="./assets/images/banner.jpg" alt="banner" class="object-cover">
+    </section>
+    <section class="bg-[#e4e4e4] sticky top-0">
+        <div class="container mx-auto py-8 min-h-screen">
+            <h1 class="text-[#708e64] text-3xl text-center pt-5 uppercase">Registration Form</h1>
+            
+                <form action="#" method="POST" class="mx-auto max-w-xl">
+                  <div class="overflow-hidden">
+                    <div class="px-4 py-5 sm:p-6 mx-auto">
+                      <div class="grid grid-cols-2 gap-4">
+                        <div>
+                          <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
+                          <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-2 w-full block border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                        </div>
+        
+                        <div>
+                          <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
+                          <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-2 w-full block border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                        </div>
+                        
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Mobile Number</label>
+                            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                        </div>
+          
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Email-ID</label>
+                            <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                        </div>
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
+                            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                        </div>
+        
+                        <div>
+                            <label for="small" class="block text-sm font-medium leading-6 text-gray-900">Select City</label>
+                            <select id="small" class="mt-2 block w-full py-1.5 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:border-green-800 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-800 dark:focus:border-green-800 focus:ring-green-800 ">
+                                <option selected>Choose a city</option>
+                                <option value="AH">Ahmedabad</option>
+                                <option value="US">Vadodra</option>
+                                <option value="CA">Surat</option>
+                                <option value="FR">Banglore</option>
+                                <option value="DE">Ranchi</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">District</label>
+                            <select id="small" class="mt-2 block w-full py-1.5 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-green-800 focus:border-green-800 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-800 dark:focus:border-green-800">
+                                <option selected>Choose a district</option>
+                                <option value="AH">Ahmedabad</option>
+                                <option value="US">Vadodra</option>
+                                <option value="CA">Surat</option>
+                                <option value="FR">Banglore</option>
+                                <option value="DE">Ranchi</option>
+                            </select>
+                        </div>
+          
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">State</label>
+                            <select id="small" class="mt-2 block w-full py-1.5 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-green-800 focus:border-green-800 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-800 dark:focus:border-green-800">
+                                <option selected>Choose a state</option>
+                                <option value="AH">Gujarat</option>
+                                <option value="US">Karnataka</option>
+                                <option value="CA">Telangana</option>
+                                <option value="FR">Jarkhand</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Company</label>
+                            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                        </div>
+        
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Website</label>
+                            <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                        </div>
+                        
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Hobbies</label>
+                            <div class="flex justify-start items-center gap-20 mt-3">
+                                <div class="flex items-center justify-center mb-4">
+                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cricket</label>
+                                </div>
+                                <div class="flex items-center justify-center mb-4">
+                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Reading</label>
+                                </div>
+                            </div>
+                            <div class="flex justify-start items-center gap-20 mt-3">
+                                <div class="flex items-center justify-center mb-4">
+                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Singing</label>
+                                </div>
+                                <div class="flex items-center justify-center mb-4">
+                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cooking</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Gender</label>
+                            <div class="flex justify-start items-center gap-20 mt-3">
+                                <div class="flex items-center mb-4">
+                                    <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Male</label>
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Female</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center items-center">
+                            <button type="button" class="focus:outline-none text-white bg-[#708e64] hover:bg-green-800 focus:ring-4 focus:ring-green-800 font-medium rounded-lg text-sm px-28 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
+                        </div>
+
+                        <div>
+                            <button type="button" class="focus:outline-none text-white bg-[#708e64] hover:bg-green-800 focus:ring-4 focus:ring-green-800 font-medium rounded-lg text-sm px-28 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Clear</button>
+                        </div>
+
+                      </div>
+                    </div>
+                    
+                  </div>
+                </form>
+           
+        </div>
+    </section>
+    <section class="card bg-white sticky top-0">
+        <div class="container mx-auto py-8">
+            <h2 class="text-[#708e64] text-3xl text-center pt-5 uppercase">our products</h2>
+
+            <div class="flex justify-evenly items-center columns-3">
+                <div class="flex flex-col justify-center gap-3 mt-10">
+                    <h3 class="text-[#708e64] text-3xl text-left uppercase">Lorem Ipsum</h3>
+                    <div>
+                        <img src="./assets/images/Product_img.png" alt="img" class="object-cover">
+                    </div>
+
+                    <div class="ul-list">
+                        <h3 class="text-[#36365a] text-sm text-left uppercase">Make Your Mark with premium business</h3>
+                        <ul class="list-disc list-inside">
+                            <li class="text-sm">Starting at $ 19.99 for 500</li>
+                            <li class="text-sm">Create in miniutes</li>
+                            <li class="text-sm">4-color prinitng on various types of card</li>
+                            <li class="text-sm">One or both side printing,square or rounded</li>
+                            <li class="text-sm">Glossy or matt finish available</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center gap-3 mt-10">
+                    <h3 class="text-[#708e64] text-3xl text-left uppercase">Lorem Ipsum</h3>
+                    <div>
+                        <img src="./assets/images/Product_img.png" alt="img">
+                    </div>
+
+                    <div class="ul-list">
+                        <h3 class="text-[#36365a] text-sm text-left uppercase">Make Your Mark with premium business</h3>
+                        <ul class="list-disc list-inside">
+                            <li class="text-sm">Starting at $ 19.99 for 500</li>
+                            <li class="text-sm">Create in miniutes</li>
+                            <li class="text-sm">4-color prinitng on various types of card</li>
+                            <li class="text-sm">One or both side printing,square or rounded</li>
+                            <li class="text-sm">Glossy or matt finish available</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center gap-3 mt-10">
+                    <h3 class="text-[#708e64] text-3xl text-left uppercase">Lorem Ipsum</h3>
+                    <div>
+                        <img src="./assets/images/Product_img.png" alt="img">
+                    </div>
+
+                    <div class="ul-list">
+                        <h3 class="text-[#36365a] text-sm text-left uppercase">Make Your Mark with premium business</h3>
+                        <ul class="list-disc list-inside">
+                            <li class="text-sm">Starting at $ 19.99 for 500</li>
+                            <li class="text-sm">Create in miniutes</li>
+                            <li class="text-sm">4-color prinitng on various types of card</li>
+                            <li class="text-sm">One or both side printing,square or rounded</li>
+                            <li class="text-sm">Glossy or matt finish available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-evenly items-center columns-3">
+                <div class="flex flex-col justify-center gap-3 mt-10">
+                    <h3 class="text-[#708e64] text-3xl text-left uppercase">Lorem Ipsum</h3>
+                    <div>
+                        <img src="./assets/images/Product_img.png" alt="img" class="object-cover">
+                    </div>
+
+                    <div class="ul-list">
+                        <h3 class="text-[#36365a] text-sm text-left uppercase">Make Your Mark with premium business</h3>
+                        <ul class="list-disc list-inside">
+                            <li class="text-sm">Starting at $ 19.99 for 500</li>
+                            <li class="text-sm">Create in miniutes</li>
+                            <li class="text-sm">4-color prinitng on various types of card</li>
+                            <li class="text-sm">One or both side printing,square or rounded</li>
+                            <li class="text-sm">Glossy or matt finish available</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center gap-3 mt-10">
+                    <h3 class="text-[#708e64] text-3xl text-left uppercase">Lorem Ipsum</h3>
+                    <div>
+                        <img src="./assets/images/Product_img.png" alt="img">
+                    </div>
+
+                    <div class="ul-list">
+                        <h3 class="text-[#36365a] text-sm text-left uppercase">Make Your Mark with premium business</h3>
+                        <ul class="list-disc list-inside">
+                            <li class="text-sm">Starting at $ 19.99 for 500</li>
+                            <li class="text-sm">Create in miniutes</li>
+                            <li class="text-sm">4-color prinitng on various types of card</li>
+                            <li class="text-sm">One or both side printing,square or rounded</li>
+                            <li class="text-sm">Glossy or matt finish available</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center gap-3 mt-10">
+                    <h3 class="text-[#708e64] text-3xl text-left uppercase">Lorem Ipsum</h3>
+                    <div>
+                        <img src="./assets/images/Product_img.png" alt="img">
+                    </div>
+
+                    <div class="ul-list">
+                        <h3 class="text-[#36365a] text-sm text-left uppercase">Make Your Mark with premium business</h3>
+                        <ul class="list-disc list-inside">
+                            <li class="text-sm">Starting at $ 19.99 for 500</li>
+                            <li class="text-sm">Create in miniutes</li>
+                            <li class="text-sm">4-color prinitng on various types of card</li>
+                            <li class="text-sm">One or both side printing,square or rounded</li>
+                            <li class="text-sm">Glossy or matt finish available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // $(function(){
+        // $(window).scroll(function(e) {
+        //     if($(this).scrollTop()>300){
+        //     $('.navbar').fadeOut(); // Fading in the button on scroll after 150px
+        //     }
+        //     else{
+        //     $('.navbar').fadeIn(); // Fading out the button on scroll if less than 150px
+        //     }
+        // });
+        // });
+
+        // var prevScrollpos = window.pageYOffset;
+        //     window.onscroll = function() {
+        //     var currentScrollPos = window.pageYOffset;
+        //     if (prevScrollpos > currentScrollPos) {
+        //         document.getElementById("navbar").style.top = "0";
+        //     } else {
+        //         document.getElementById("navbar").style.top = "-98px";
+        //     }
+        //     prevScrollpos = currentScrollPos;
+        //     }
+    </script>
+</body>
+</html>
