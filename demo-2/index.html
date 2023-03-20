@@ -11,6 +11,7 @@
         .dropdown:hover .dropdown-menu {
         display: block;
         }
+        input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {display: none;margin: 0; }
     </style>
 </head>
 <body> 
@@ -57,37 +58,37 @@
         <div class="container mx-auto py-8 min-h-screen">
             <h1 class="text-[#708e64] text-3xl text-center pt-5 uppercase">Registration Form</h1>
             
-                <form action="#" method="POST" class="mx-auto max-w-xl">
+                <form action="./redirect/redirect.html" method="get" class="mx-auto max-w-xl">
                   <div class="overflow-hidden">
                     <div class="px-4 py-5 sm:p-6 mx-auto">
                       <div class="grid grid-cols-2 gap-4">
                         <div>
                           <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">First name</label>
-                          <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-2 w-full block border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                          <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-2 w-full block border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6 px-3" required>
                         </div>
         
                         <div>
                           <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Last name</label>
-                          <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-2 w-full block border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                          <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-2 w-full block border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6 px-3" required>
                         </div>
                         
                         <div>
-                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Mobile Number</label>
-                            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                            <label for="mobile" class="block text-sm font-medium leading-6 text-gray-900">Mobile Number</label>
+                            <input type="number" name="mobile" id="mobile"  onKeyPress="if(this.value.length==10) return false;" title="Ten digits code" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6 px-3" required>
                         </div>
           
                         <div>
-                            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Email-ID</label>
-                            <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email-ID</label>
+                            <input type="email" name="email" id="email" autocomplete="family-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6 px-3" required>
                         </div>
                         <div>
-                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
-                            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                            <label for="add" class="block text-sm font-medium leading-6 text-gray-900">Address</label>
+                            <input type="text" name="add" id="add" autocomplete="given-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6 px-3" required>
                         </div>
         
                         <div>
                             <label for="small" class="block text-sm font-medium leading-6 text-gray-900">Select City</label>
-                            <select id="small" class="mt-2 block w-full py-1.5 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:border-green-800 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-800 dark:focus:border-green-800 focus:ring-green-800 ">
+                            <select id="small" class="mt-2 block w-full py-1.5 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:border-green-800 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-800 dark:focus:border-green-800 focus:ring-green-800 "required>
                                 <option selected>Choose a city</option>
                                 <option value="AH">Ahmedabad</option>
                                 <option value="US">Vadodra</option>
@@ -98,8 +99,8 @@
                         </div>
 
                         <div>
-                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">District</label>
-                            <select id="small" class="mt-2 block w-full py-1.5 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-green-800 focus:border-green-800 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-800 dark:focus:border-green-800">
+                            <label for="small-n" class="block text-sm font-medium leading-6 text-gray-900">District</label>
+                            <select id="small-n" class="mt-2 block w-full py-1.5 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-green-800 focus:border-green-800 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-800 dark:focus:border-green-800" required>
                                 <option selected>Choose a district</option>
                                 <option value="AH">Ahmedabad</option>
                                 <option value="US">Vadodra</option>
@@ -110,8 +111,8 @@
                         </div>
           
                         <div>
-                            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">State</label>
-                            <select id="small" class="mt-2 block w-full py-1.5 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-green-800 focus:border-green-800 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-800 dark:focus:border-green-800">
+                            <label for="state" class="block text-sm font-medium leading-6 text-gray-900">State</label>
+                            <select id="state" class="mt-2 block w-full py-1.5 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-green-800 focus:border-green-800 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-800 dark:focus:border-green-800" required>
                                 <option selected>Choose a state</option>
                                 <option value="AH">Gujarat</option>
                                 <option value="US">Karnataka</option>
@@ -120,59 +121,59 @@
                             </select>
                         </div>
                         <div>
-                            <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">Company</label>
-                            <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                            <label for="company" class="block text-sm font-medium leading-6 text-gray-900">Company</label>
+                            <input type="text" name="company" id="company" autocomplete="given-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6 px-3" required>
                         </div>
         
                         <div>
-                            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Website</label>
-                            <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6">
+                            <label for="web" class="block text-sm font-medium leading-6 text-gray-900">Website</label>
+                            <input type="url" name="web" id="last-name" autocomplete="family-name" class="mt-2 block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-800 sm:text-sm sm:leading-6 px-3" required>
                         </div>
                         
                         <div>
-                            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Hobbies</label>
+                            <label for="hobb" class="block text-sm font-medium leading-6 text-gray-900">Hobbies</label>
                             <div class="flex justify-start items-center gap-20 mt-3">
                                 <div class="flex items-center justify-center mb-4">
-                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cricket</label>
+                                    <input id="cricket" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="cricket" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cricket</label>
                                 </div>
                                 <div class="flex items-center justify-center mb-4">
-                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Reading</label>
+                                    <input id="reading" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="reading" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Reading</label>
                                 </div>
                             </div>
                             <div class="flex justify-start items-center gap-20 mt-3">
                                 <div class="flex items-center justify-center mb-4">
-                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Singing</label>
+                                    <input id="singing" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="singing" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Singing</label>
                                 </div>
                                 <div class="flex items-center justify-center mb-4">
-                                    <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cooking</label>
+                                    <input id="cooking" type="checkbox" value="" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 rounded focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="cooking" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cooking</label>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">Gender</label>
+                            <label for="gender" class="block text-sm font-medium leading-6 text-gray-900">Gender</label>
                             <div class="flex justify-start items-center gap-20 mt-3">
                                 <div class="flex items-center mb-4">
                                     <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Male</label>
                                 </div>
                                 <div class="flex items-center mb-4">
-                                    <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                    <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Female</label>
+                                    <input id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-green-700 bg-gray-100 border-gray-300 focus:ring-[#6b925b] dark:focus:ring-[#6b925b] dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="default-radio-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Female</label>
                                 </div>
                             </div>
                         </div>
 
                         <div class="flex justify-center items-center">
-                            <button type="button" class="focus:outline-none text-white bg-[#708e64] hover:bg-green-800 focus:ring-4 focus:ring-green-800 font-medium rounded-lg text-sm px-28 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
+                            <input type="submit" value="Submit" class="focus:outline-none text-white bg-[#708e64] hover:bg-green-800 focus:ring-4 focus:ring-green-800 font-medium rounded-lg text-sm px-28 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 cursor-pointer">
                         </div>
 
                         <div>
-                            <button type="button" class="focus:outline-none text-white bg-[#708e64] hover:bg-green-800 focus:ring-4 focus:ring-green-800 font-medium rounded-lg text-sm px-28 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Clear</button>
+                           <input type="reset" value="Reset" class="focus:outline-none text-white bg-[#708e64] hover:bg-green-800 focus:ring-4 focus:ring-green-800 font-medium rounded-lg text-sm px-28 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 cursor-pointer"> 
                         </div>
 
                       </div>
@@ -187,7 +188,7 @@
         <div class="container mx-auto py-8">
             <h2 class="text-[#708e64] text-3xl text-center pt-5 uppercase">our products</h2>
 
-            <div class="flex justify-evenly items-center columns-3">
+            <div class="flex flex-col lg:flex-row justify-evenly items-center columns-3">
                 <div class="flex flex-col justify-center gap-3 mt-10">
                     <h3 class="text-[#708e64] text-3xl text-left uppercase">Lorem Ipsum</h3>
                     <div>
@@ -240,7 +241,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-evenly items-center columns-3">
+            <div class="flex flex-col lg:flex-row justify-evenly items-center columns-2 lg:columns-3">
                 <div class="flex flex-col justify-center gap-3 mt-10">
                     <h3 class="text-[#708e64] text-3xl text-left uppercase">Lorem Ipsum</h3>
                     <div>
